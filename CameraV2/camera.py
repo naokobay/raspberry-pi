@@ -13,5 +13,9 @@ os.chmod(dir_path, 0777)
  
 picamera = picamera.PiCamera()
 picamera.resolution = (3280,2464)
+picamera.sharpness = 100
+picamera.brightness = 42
+picamera.exposure_mode = 'auto'
+picamera.awb_mode = 'auto'
 picamera.capture(dir_path+'/'+file_name+'.jpg')
 
