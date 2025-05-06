@@ -7,8 +7,8 @@ import picamera
 BASE_DIR = '/home/pi/github/raspberry-pi/CameraV2'
 DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1361346984656503047/_DrOF__XM4YVyarqaa7S0n2deJUZjwnWX9qtxkajC2ZnXsbeQ0mbcQ00YELB5FJAhBXZ"
 CAMERA_RESOLUTION = (3280, 2464)
-CAMERA_SHARPNESS = 80
-CAMERA_BRIGHTNESS = 40
+CAMERA_SHARPNESS = 90
+CAMERA_BRIGHTNESS = 30
 RESIZE_SCALE = 1.0
 
 
@@ -71,6 +71,8 @@ def main():
         camera.resolution = CAMERA_RESOLUTION
         camera.sharpness = CAMERA_SHARPNESS
         camera.brightness = CAMERA_BRIGHTNESS
+	camera.contrast = 5
+	camera.saturation = 5
         camera.exposure_mode = 'auto'
         camera.awb_mode = 'auto'
 
